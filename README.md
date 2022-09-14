@@ -8,7 +8,7 @@ Built by [Amber](https://github.com/amberdonnelly) and [Alex](https://github.com
 
 ### locally
 
-Setup your python env.
+Setup your python env. (You only need to do this part once.)
 ```
 sudo apt update
 sudo apt install python3-pip
@@ -19,30 +19,66 @@ vi ~/.bashrc
 	alias pip=pip3
 # exit with esc + :wq
 
-sudo apt install python3.8-venv
+sudo apt install python3-venv
 
 # create a virtual env
 virtualenv venv
 source venv/bin/activate
+
+# install the requirements
+cd api/
+pip install -r api/requirements.txt
 ```
 
-Then install all the requirements.
+Set up your node env. (You only need to do this part once as well.)
 ```
-pip install -r api/requirements.txt
+# install node
+sudo apt install nodejs
+sudo apt install npm
+
+# install the requirements
 npm i
 ```
 
-You'll need 2 console tabs to run the app.
+Then run the app! You'll need 2 console tab open.
 ```
-# start the frontend
+# in one console start the frontend
+cd movieme/
 npm start
 
-# start the backend
+# and in the other start the backend
+cd movieme/
+source venv/bin/activate
 cd api/
 flask run --no-debugger
 ```
 
 You'll be able to view the app at [http://localhost:3000](http://localhost:3000).
+
+Remember to make sure you're up to date with the remote before making changes.
+```
+git fetch
+git pull
+```
+
+Steps to commit your changes:
+```
+# see what files you've edited
+git status
+
+# add the files you want to commit
+# if you want to add all files you can type "git add ."
+git add <list the files you want to add, separated by spaces>
+
+# check the files you want to commit are in green
+git status
+
+# write a commit message
+git commit -m "<your commit message>"
+
+# push the changes
+git push
+```
 
 ## other references
 
