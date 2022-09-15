@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import './App.css';
+import ReactDOM from "react-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Layout from './pages/Layout';
+import Home from './pages/Home';
+import Profile from './pages/Profile';
+import Watchlist from './pages/Watchlist';
+
 
 function App() {
   const [currentTime, setCurrentTime] = useState(0);
@@ -11,14 +18,15 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <header className="App-header">
-
-        Hello!
-
-        <p>The current time is {currentTime}.</p>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="profile" element={<Profile />} />
+          <Route path="watchlist" element={<Watchlist />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
