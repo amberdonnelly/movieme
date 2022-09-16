@@ -7,10 +7,10 @@ function renderHeader() {
     <header>
       <div className="header">
         <h1 className="movieme"><Link to="/">movie me</Link></h1>
-        <Link className="header-btn" to="/watchlist">
+        <Link className="header-btn watchlist-btn" to="/watchlist">
           watchlist
         </Link>
-        <Link className="header-btn" to="/profile">
+        <Link className="header-btn profile-btn" to="/profile">
           profile
         </Link>
       </div>
@@ -22,7 +22,7 @@ function renderFooter() {
   return (
     <footer>
       <div className="footer">
-        <h3>by Amber & Alexa</h3>
+        <h3 className="a-a">by Amber & Alexa</h3>
       </div>
     </footer>
   );

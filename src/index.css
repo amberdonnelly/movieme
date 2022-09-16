@@ -26,24 +26,38 @@ body {
 a {
   text-decoration: none;
 }
+a:visited {
+  color: inherit;
+}
+
 /* header section */
 .movieme {
   color: #17223b;
   font-family: 'Dancing Script', cursive;
   font-size: 60px;
+  position: absolute;
+  left: 10%;
 }
+
 .header-btn {
   background-color: #ff6768;
   border: none;
   border-radius: 12px;
-  color: #eaf6f6;
-  cursor: pointer;
+  color: #eaf6f6 !important;
   font-size: 30px;
   padding: 5px;
   margin: 10px;
 }
 .header-btn:hover {
   background-color:#ff0063;
+}
+.profile-btn {
+  position: absolute;
+  right: 2%;
+}
+.watchlist-btn {
+  position: absolute;
+  right: 18%;
 }
 
 /* body section */
@@ -53,5 +67,11 @@ footer {
   background-color: #66bfbf;
   font-family: 'Dancing Script', cursive;
   height: 10vh;
-  text-align: center;
+  position:absolute;
+  bottom: 10px;
+  left: 45%;
+}
+.a-a {
+  color: #17223b;
+  padding: 10px;
 }
