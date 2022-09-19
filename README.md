@@ -20,6 +20,11 @@ Visit the app at [http://localhost:3000](http://localhost:3000).
 
 Changes to the frontend (anything within /src) should live reload.
 
+To stop the app, run
+```
+docker-compose down
+```
+
 If you need to check logs, run
 ```
 docker logs -f movieme
