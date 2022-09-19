@@ -5,6 +5,7 @@ ENV PATH /app/node_modules/.bin:$PATH
 COPY package.json ./
 COPY ./src ./src
 COPY ./public ./public
+RUN npm update -g
 RUN npm install
 
 RUN mkdir ./api
