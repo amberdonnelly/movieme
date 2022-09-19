@@ -1,14 +1,16 @@
 version: "3.9"
 services:
-  movieme_api:
+  movieme:
+    container_name: movieme
     build:
       context: .
-      dockerfile: Dockerfile.api
-    image: movieme_api
-  movieme_client:
-    build:
-      context: .
-      dockerfile: Dockerfile.client
-    image: movieme_client
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/app/src
+      - nodemodules:/app/node_modules
+    image: movieme-app
     ports:
-      - "3000:80"
+      - "3000:3000"
+
+volumes:
+    nodemodules: {}
