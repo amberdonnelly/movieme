@@ -6,6 +6,25 @@ Built by [Amber](https://github.com/amberdonnelly) and [Alex](https://github.com
 
 ## getting started
 
+### docker
+
+Install [Docker Desktop](https://docs.docker.com/desktop/install/windows-install/).
+
+Make sure the Docker Desktop app is started, then from the root of this project run
+```
+docker-compose build
+docker-compose up -d
+```
+
+Visit the app at [http://localhost:3000](http://localhost:3000).
+
+Changes to the frontend (anything within /src) should live reload.
+
+If you need to check logs, run
+```
+docker logs -f movieme
+```
+
 ### locally
 
 Setup your python env. (You only need to do this part once.)

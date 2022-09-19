@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  movieme:
+    container_name: movieme
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/app/src
+      - nodemodules:/app/node_modules
+    image: movieme-app
+    ports:
+      - "3000:3000"
+
+volumes:
+    nodemodules: {}
