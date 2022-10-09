@@ -17,4 +17,4 @@ EXPOSE 3000
 COPY run.sh ./
 RUN chmod +x run.sh
 
-CMD ["./run.sh"]
+CMD ["bash", "run.sh"]
