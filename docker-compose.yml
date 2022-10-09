@@ -6,11 +6,12 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - ./src:/app/src
+      - src:/app/src
       - nodemodules:/app/node_modules
     image: movieme-app
     ports:
       - "3000:3000"
 
 volumes:
+    src: {}
     nodemodules: {}
